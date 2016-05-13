@@ -1,1 +1,1 @@
-.list__footer>li{padding:3px}.list__footer>li>a{color:rgba(0,0,0,0.6);transition:all 200ms}.list__footer>li>a:hover{color:#000}
+.list{margin-top:20px}.list__teaser{display:inline-block;background:#fff;border-radius:3px;border:1px solid #ddd}.list__link{margin-top:10px;font-style:italic;border-bottom:1px solid;line-height:18px}.list__date{display:block;text-align:left;margin:5px 0}

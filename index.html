@@ -11,16 +11,24 @@
     <link rel="stylesheet" href="/Content/css/Components/navbar.css">
     <link rel="stylesheet" href="/Content/css/Components/text.css">
     <link rel="stylesheet" href="/Content/css/Components/utilits.css">
+    <link rel="stylesheet" href="/Content/css/Components/panel.css">
+    <link rel="stylesheet" href="/Content/css/Components/list.css">
 
     <link rel="stylesheet" href="/Content/css/main.css">
 
     <header class="container container--center header">
-        <div>
-            <a href="#" class="header__lang">English version →</a>
+        <div class="header__lang">
+            <a href="#">English version →</a>
         </div>
         <div class="header__logo">
             <img src="/Content/img/logo_25.png" alt="">
         </div>
+        <div class="header__phone">
+            <a href="tel:+74953631010">+7 (495) 363-10-10</a>
+        </div>
+        <!-- <div class="header__call">
+            <a href="#">заказать звонок</a>
+        </div> -->
     </header>
 
     <nav class="container container--center">
@@ -36,8 +44,95 @@
             </ul>
         </div>
     </nav>
-        {{1 + 1}}
 
+    <div class="container container--center">
+        <div class="panel panel--box">
+            <h1 class="text--h1">Агентство недвижимости ИНКОМ&nbsp;— крупнейшее в&nbsp;Москве</h1>
+            <p>ИНКОМ-Недвижимость&nbsp;— агентство недвижимости, занимающее ведущие позиции на&nbsp;рынке риэлторских услуг.&nbsp;По&nbsp;оценкам экспертов, значительная часть организованных сделок в&nbsp;московском регионе приходится именно на&nbsp;«ИНКОМ», что позволяет нам вот уже многие годы занимать лидирующее место среди агентств недвижимости Москвы и&nbsp;Подмосковья.</p>
+
+            <ul class="grid grid-col--1-5 text--center list">
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/cat/icon01.png" alt=""></span>
+                        <span class="list__link">Квартиры и комнаты</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/cat/icon02.png" alt=""></span>
+                        <span class="list__link">Новостройки</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/cat/icon03.png" alt=""></span>
+                        <span class="list__link">Аренда квартир и комнат</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/cat/icon04.png" alt=""></span>
+                        <span class="list__link">Коттеджи, таунхаусы, участки</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/cat/icon05.png" alt=""></span>
+                        <span class="list__link">Коммерческая недвижимость</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container container--center">
+        <div class="panel panel--box panel--white">
+
+            <h3 class="text--h3">
+                Новости
+                <a href="#" class="text--h5 text--subscribe">Подписаться</a>
+            </h3>
+
+            <ul class="grid grid-col--1-4 list">
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/news/news-1.png" alt=""></span>
+                    </a>
+                    <span class="list__date">13.05.2016</span>
+                    <a href="#">
+                        Цена ВИП-ложи на финальные игры Чемпионата мира по хоккею равна стоимости трехкомнатной квартиры в центре Москвы
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/news/news-2.png" alt=""></span>
+                    </a>
+                    <span class="list__date">13.05.2016</span>
+                    <a href="#" class="list__link">
+                        Цена ВИП-ложи на финальные игры Чемпионата мира по хоккею равна стоимости трехкомнатной квартиры в центре Москвы
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/news/news-3.png" alt=""></span>
+                    </a>
+                    <span class="list__date">13.05.2016</span>
+                    <a href="#">
+                        Цена ВИП-ложи на финальные игры Чемпионата мира по хоккею равна стоимости трехкомнатной квартиры в центре Москвы
+                    </a>                </li>
+                <li>
+                    <a href="#">
+                        <span class="list__teaser"><img src="/Content/img/news/news-4.png" alt=""></span>
+                    </a>
+                    <span class="list__date">13.05.2016</span>
+                    <a href="#">
+                        Цена ВИП-ложи на финальные игры Чемпионата мира по хоккею равна стоимости трехкомнатной квартиры в центре Москвы
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
         <script src="/bower_components/angular/angular.min.js"></script>
     </body>

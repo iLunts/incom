@@ -14,23 +14,33 @@
  ========================================================================== */
 
 .list {
+    margin-top: 20px;
 
-}
+    // Element 'list__teaser'
+    &__teaser{
+        display: inline-block;
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+    }
 
+    // Element 'list__link'
+    &__link{
+        margin-top: 10px;
+        font-style: italic;
+        border-bottom: 1px solid;
+        line-height: 18px;
+    }
 
+    // Element 'list__date'
+    &__date{
+        display: block;
+        text-align: left;
+        margin: 5px 0;
+    }
 
+    // Element 'list__desc'
+    &__desc{
 
-// Element 'list__footer'
-.list__footer{
-    & > li{
-        padding: @list-footer-padding;
-        & > a{
-            color: rgba(0, 0, 0, 0.6);
-            transition: all 200ms;
-
-            &:hover{
-                color: rgba(0, 0, 0, 1);
-            }
-        }
     }
 }

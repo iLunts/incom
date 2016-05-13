@@ -8,7 +8,7 @@
 
 @main-sticky-footer-height:            160px;
 
-// *******************
+// **************************************
 @font-face {
     font-family: 'Trebuchet MS';
     src:    url('/Content/fonts/Trebuchet-MS.eot');
@@ -19,13 +19,15 @@
     font-weight: normal;
     font-style: normal;
 }
+// ***************************************
 
 
 body, html{
     background: #fbfbfb;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 14px;
-    color: #555555;
+    color: #373737;
+    background: #fbfbfb;
     z-index: 1;
 }
 
@@ -50,13 +52,40 @@ body, html{
 // *******************************************
 
 .header{
-    margin: 10px 0;
+    margin: 5px 0 10px 0;
 
     // Element 'header__lang'
     &__lang{
-        font-size: 80%;
-        font-style: italic;
-        color: #999;
-        border-bottom: 1px solid;
+        margin-bottom: 10px;
+        & a{
+            font-size: 80%;
+            font-style: italic;
+            color: #999;
+            border-bottom: 1px solid;
+        }
+    }
+
+    // Element 'header__logo'
+    &__logo{
+        display: inline-block;
+
+    }
+
+    // Element 'header__phone'
+    &__phone{
+        float: right;
+        display: inline-block;
+
+        & > a{
+            line-height: 32px;
+            font-size: 26px;
+            color: #034da2;
+        }
+    }
+
+    // Element 'header__call'
+    &__call{
+        display: inline-block;
+        float: right;
     }
 }
