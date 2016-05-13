@@ -1,0 +1,21 @@
+{
+  "name": "incom",
+  "homepage": "https://github.com/iLunts/incom",
+  "authors": [
+    "iLunts <shipik2008@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.5"
+  }
+}
