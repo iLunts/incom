@@ -1,0 +1,191 @@
+// out: ../../css/components/input.css, compress: true
+// Name:            Input
+// Description:     Defines styles for input
+//
+// Component:       `input`
+//
+// Modifiers:       `input--tags*`
+//                  `input--search`
+//                  `input--select`
+//                  `input--*`
+//
+//
+// **************** Variables ****************
+// padding
+@input-padding--small:                     5px;
+@input-padding:                            10px;
+@input-padding--big:                       15px;
+
+// Margin
+@input-margin:                             10px;
+
+// color
+@input-text-color:                         #333;
+@input-background:                         #fff;
+@input-border-color:                       #ddd;
+@input-border-bottom-color:                #ddd;
+@input-border-bottom-color-active:         #FFC716;
+
+@input-search-border-color:                #dadada;
+
+// border-radius
+@input-border-radius:                      0;
+@input-border-radius--big:                 100px;
+
+// Modificator 'tags'
+@input-tags-border-color:                  #bdbdbd;
+
+// ********* Label variables *******       ******
+@label-font-size:                          10px;
+@label-line-height:                        @label-font-size + 4px;
+
+// Margin
+@label-margin:                             5px;
+
+
+
+// ******************* Base ******************
+
+.input {
+    position: relative;
+    padding: @input-padding;
+    color: @input-text-color;
+    background: @input-background;
+    border-radius: @input-border-radius;
+    border: 1px solid @input-border-color;
+    margin-bottom: @input-margin;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 200ms;
+
+    // &:focus{
+    //     border-bottom-color: @input-border-bottom-color-active;
+    // }
+
+    // Element 'input__group'
+    // &__group{
+    //     position: relative;
+    //
+    //     &__desc{
+    //         position: absolute;
+    //         top: 42%;
+    //         right: 10px;
+    //         transform: translateY(-50%);
+    //     }
+    //
+    //     & > [class^='icon-']{
+    //         position: absolute;
+    //         left: 10px;
+    //         top: 50%;
+    //         transform: translateY(-50%);
+    //     }
+    // }
+
+    // Modificator `input--rounded`
+    // &--rounded{
+    //     border-radius: 100px;
+    //     border-bottom: 1px solid @input-border-bottom-color;
+    // }
+
+    // Modificator 'search'
+    &--search {
+        position: relative;
+        padding: @input-padding--small @input-padding--big;
+        padding-left: (@input-padding--big*2) !important;
+        border: 1px solid @input-search-border-color;
+        border-radius: @input-border-radius--big;
+    }
+
+    // Modificator 'tags'
+    // &--tags{
+    //     border-color: @input-tags-border-color;
+    // }
+
+    // Modificator 'small'
+    &--small{
+        padding: @input-padding--small;
+
+        &.input--search{
+            padding-left: (@input-padding--big * 2 - 5) !important;
+        }
+    }
+
+    // Modificator 'small'
+    &--mini{
+        padding: (@input-padding--small / 2);
+
+        &.input--search{
+            padding-left: (@input-padding--big * 2 - 5) !important;
+        }
+    }
+
+    // Modificator 'tags'
+    // &--select{
+    //     position: relative;
+    //     margin-bottom: @input-margin;
+    //
+    //     & > select{
+    //         cursor: pointer;
+    //         margin-bottom: 0;
+    //         padding-right: (@input-padding * 3);
+    //     }
+    //
+    //     &:after{
+    //         content: '\e5c5';
+    //         font-family: 'icomoon';
+    //         position: absolute;
+    //         right: @input-padding;
+    //         top: 50%;
+    //         font-size: 18px;
+    //         color: #5F5F5F;
+    //         transform: translateY(-50%);
+    //     }
+    // }
+}
+
+// *********** All inputs ***************
+
+// Label
+
+.label{
+    display: block;
+    width: 100%;
+    margin: @label-margin 0 0 0;
+    font-size: @label-font-size;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9b9b9b;
+
+    // Modificator `label--rounded`
+    &--rounded{
+        margin-left: 10px;
+    }
+}
+
+
+/// Form__row
+// Element `form__row`
+// .form__row{
+//     & + .form__row{
+//         margin-top: 15px;
+//     }
+// }
+
+// .form__controls{
+//     margin-left: 30%;
+//     & .input{
+//         margin: 0;
+//     }
+// }
+
+.label{
+
+    // Modificator `label--form`
+    &--form{
+        width: 30%;
+        margin-top: 15px;
+        float: left;
+    }
+}

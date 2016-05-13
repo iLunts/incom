@@ -1,0 +1,36 @@
+// out: ../../css/components/list.css, compress: true
+// Name:            List
+// Description:     Defines styles to create layouts with list
+//
+// Component:       `list__*`
+//
+//
+// ========================================================================
+
+@list-footer-padding:                     3px;
+
+/* ========================================================================
+   Component: List
+ ========================================================================== */
+
+.list {
+
+}
+
+
+
+
+// Element 'list__footer'
+.list__footer{
+    & > li{
+        padding: @list-footer-padding;
+        & > a{
+            color: rgba(0, 0, 0, 0.6);
+            transition: all 200ms;
+
+            &:hover{
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}

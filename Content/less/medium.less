@@ -1,0 +1,21 @@
+// out: ../css/medium.css, compress: true
+
+// Variables
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    // Element 'hidden'
+    .hidden{
+        &--small{
+            display: inline-block;
+        }
+    }
+
+    // Element 'visible'
+    .visible{
+        &--small{
+            display: none !important;
+        }
+    }
+
+}

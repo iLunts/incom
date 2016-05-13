@@ -1,0 +1,18 @@
+// out: ../css/large.css, compress: true
+
+@media (min-width: 1025px) and (max-width: 1600px)  {
+
+    // Element 'hidden'
+    .hidden{
+        &--small{
+            display: inline-block;
+        }
+    }
+
+    // Element 'visible'
+    .visible{
+        &--small{
+            display: none !important;
+        }
+    }
+}

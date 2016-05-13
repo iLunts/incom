@@ -1,0 +1,170 @@
+// out: ../../css/components/navbar.css, compress: true
+// Name:            Navbar
+// Description:     Defines styles for list Navbar
+//
+// Component:       `navbar`
+//
+// Sub-objects:     `navbar__header`
+//                  `navbar__divider`
+//                  `navbar__sub`
+//
+// Modifiers:       `navbar--parent-icon`
+//                  `navbar--side`
+//                  `navbar--dropdown`
+//                  `navbar--navbar`
+//                  `navbar--offcanvas`
+//
+// States:          `active`
+//                  `parent`
+//                  `open`
+//                  `touch`
+//
+// Uses:            Icon: FontAwesome or icoMoon
+//
+// Used by:         Panel
+//                  Dropdown
+//
+// Markup:
+//
+// <!-- nav -->
+// <ul class="navbar">
+//     <li class="active"><a href=""></a></li>
+//     <li><a href=""></a></li>
+// </ul>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@navbar-background:                                rgba(255, 255, 255, 1);
+@navbar-height:                                    54px;
+@navbar-padding:                                   15px;
+
+@nav-padding:                                      15px;
+
+
+@nav-padding-vertical:                             5px;
+@nav-padding-horizontal:                           15px;
+
+/* ========================================================================
+   Component: Nav
+ ========================================================================== */
+
+.nav{
+    border: none;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: @navbar-height;
+    background: @navbar-background;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    // Element 'navbar__nav'
+    &__brand{
+        width: (@navbar-height * 3);
+        padding: (@nav-padding / 3) 0;
+    }
+
+    // Element 'navbar__search'
+    &__search{
+        width: 150px;
+    }
+
+    // Element 'navbar__burder'
+    &__burger{
+        font-size: 2.2rem;
+    }
+
+    // Element 'navbar__nav'
+    &__nav{
+        font-size: 0;
+        list-style: none;
+        & > li{
+            font-size: 14px;
+            display: inline-block;
+            & > a{
+                position: relative;
+                height: @navbar-height;
+                display: inline-block;
+                padding: 0 (@nav-padding);
+                text-decoration: none;
+                color: #171717;
+                line-height: @navbar-height;
+            }
+
+            & > .button--lang{
+                position: relative;
+                min-height: 20px;
+                line-height: 20px;
+                border-radius: 50px;
+                margin-left: 10px;
+                margin-top: -4px;
+                padding: 0 10px 0 30px;
+                &>img{
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    opacity: 0.7;
+
+                    transform: translateY(-50%);
+                }
+            }
+
+            & > input{
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+
+
+// *********************************************************
+//                        SMALL
+// *********************************************************
+
+@media (max-width: 767px)  {
+
+    .navbar{
+        height: 40px;
+
+        // Element 'navbar__brand'
+        &__brand img{
+            width: 120px;
+            margin-top: 3px;
+        }
+
+        // Element 'navbar__nav'
+        &__nav{
+            & > li{
+                & > a{
+                    padding: 0;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+// *********************************************************
+//                MEDIUM  Portrait
+// *********************************************************
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait) {
+
+    .navbar__nav{
+        & .button--lang{
+            display: none;
+        }
+    }
+}

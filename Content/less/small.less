@@ -1,0 +1,22 @@
+// out: ../css/small.css, compress: true
+
+
+// ---------- Base --------------
+
+@media (max-width: 767px)  {
+
+    // Element 'hidden'
+    .hidden{
+        &--small{
+            display: none !important;
+        }
+    }
+
+    // Element 'visible'
+    .visible{
+        &--small{
+            display: inline-block;
+        }
+    }
+
+}
