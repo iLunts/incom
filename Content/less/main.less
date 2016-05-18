@@ -6,7 +6,7 @@
 @main-list-height:                     3em;
 @main-list-ckeck-icon-height:          40px;
 
-@main-sticky-footer-height:            160px;
+@main-sticky-footer-height:            230px;
 
 // **************************************
 @font-face {
@@ -24,11 +24,18 @@
 
 body, html{
     background: #fbfbfb;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 14px;
     color: #373737;
     background: #fbfbfb;
     z-index: 1;
+
+    font-family: Georgia, serif;
+}
+
+p{
+    font-size: 16px;
+    line-height: 23px;
+    color: rgb(85, 85, 85);
 }
 
 .page-wrap {
@@ -52,11 +59,12 @@ body, html{
 // *******************************************
 
 .header{
-    margin: 5px 0 10px 0;
+    margin: 2px 0 8px 0;
 
     // Element 'header__lang'
     &__lang{
         margin-bottom: 10px;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
         & a{
             font-size: 80%;
             font-style: italic;
@@ -75,10 +83,11 @@ body, html{
     &__phone{
         float: right;
         display: inline-block;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
 
         & > a{
-            line-height: 32px;
-            font-size: 26px;
+            line-height: 26px;
+            font-size: 30px;
             color: #034da2;
         }
     }
@@ -90,18 +99,39 @@ body, html{
     }
 }
 
+// *******************************************
+//                Slider
+// *******************************************
+.slider{
+    position: relative;
+    height: 330px;
+    padding-top: 30px;
+    margin-bottom: 40px;
+
+    // Element 'slider__shadow'
+    &__shadow{
+        position: absolute;
+        bottom: -23px;
+        height: 23px;
+        left: 0;
+        right: 0;
+        background: url(/Content/img/slide_shadow.png) center bottom no-repeat;
+    }
+}
+
 
 // *******************************************
 //                Footer
 // *******************************************
 
 .footer{
-    margin-top: 40px;
-    background: #f0f0f0;
+    margin: 40px 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 
     // Element 'footer__top'
     &__top{
-        padding: 5px 0;
+        height: 36px;
+        padding: 9px 20px;
         color: #fff;
         border-radius: 4px 4px 0 0;
         background: #023f93;
@@ -112,5 +142,51 @@ body, html{
         background: -o-linear-gradient(#023f93, #055cac);
         background: linear-gradient(#023f93, #055cac);
         -pie-background: linear-gradient(#023f93, #055cac);
+
+        font-family: Tahoma, Geneva, sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        color: #ffffff;
+
+        & a{
+            border-bottom: 1px solid;
+        }
+
+        & .phone{
+            float: right;
+            color: #fff;
+            border-bottom: none;
+            font-size: 20px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+        }
+    }
+
+    // Element 'footer__content'
+    &__content{
+        background: #f0f0f0;
+        border: 1px solid #e1e1e1;
+        border-top: none;
+        padding: 15px 20px 10px;
+    }
+
+    & .list{
+        margin: 0;
+
+        // Element 'title'
+        & .title{
+            font-size: 18px;
+            color: #373737;
+            display: block;
+            font-style: normal;
+            padding: 8px 0 12px;
+        }
+
+        & a{
+            font-size: 12px;
+            font-style: italic;
+            color: #034da2;
+            text-decoration: underline;
+            line-height: 21px;
+        }
     }
 }

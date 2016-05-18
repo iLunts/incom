@@ -6,7 +6,11 @@
     </head>
     <body>
 
+    <link rel="stylesheet" href="bower_components/owl.carousel/src/css/owl.carousel.css">
+    <link rel="stylesheet" href="bower_components/owl.carousel/src/css/owl.theme.default.css">
+
     <link rel="stylesheet" href="/Content/css/Components/reset.css">
+    <link rel="stylesheet" href="/Content/css/Components/reset-plugins.css">
     <link rel="stylesheet" href="/Content/css/Components/grid.css">
     <link rel="stylesheet" href="/Content/css/Components/navbar.css">
     <link rel="stylesheet" href="/Content/css/Components/text.css">
@@ -15,6 +19,10 @@
     <link rel="stylesheet" href="/Content/css/Components/list.css">
     <link rel="stylesheet" href="/Content/css/Components/input.css">
     <link rel="stylesheet" href="/Content/css/Components/button.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/owl.carousel/src/js/owl.carousel.js"></script>
+    <script src="Scripts/Scripts.js"></script>
 
     <link rel="stylesheet" href="/Content/css/main.css">
 
@@ -47,7 +55,26 @@
         </div>
     </nav>
 
+    <div class="container container--center slider">
+        <div class="slider__shadow"></div>
+        <div class="panel">
+            <div class="owl-carousel slider-main">
+                <div class="owl-item slider__item slider__item--1">
+                    <a href="#">
+                        <img src="/Content/img/slider/slide-1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item slider__item slider__item--2">
+                    <a href="#">
+                        <img src="/Content/img/slider/slide-2.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container container--center">
+
         <div class="panel panel--box">
             <h1 class="text--h1">Агентство недвижимости ИНКОМ&nbsp;— крупнейшее в&nbsp;Москве</h1>
             <p>ИНКОМ-Недвижимость&nbsp;— агентство недвижимости, занимающее ведущие позиции на&nbsp;рынке риэлторских услуг.&nbsp;По&nbsp;оценкам экспертов, значительная часть организованных сделок в&nbsp;московском регионе приходится именно на&nbsp;«ИНКОМ», что позволяет нам вот уже многие годы занимать лидирующее место среди агентств недвижимости Москвы и&nbsp;Подмосковья.</p>
@@ -158,11 +185,58 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="footer__top">
-            © 2001-2016. ИНКОМ-Недвижимость  |
-            <a href="#" class="link--reset" rel="nofollow">Ограничение ответственности</a> |
-            <a href="#" class="link--reset" rel="nofollow">Карта сайта</a>
+    <footer class="container container--center">
+        <div class="footer">
+            <div class="footer__top">
+                © 2001-2016. ИНКОМ-Недвижимость  |
+                <a href="#" class="link--reset" rel="nofollow">Ограничение ответственности</a> |
+                <a href="#" class="link--reset" rel="nofollow">Карта сайта</a>
+
+                <a class="phone" href="tel:+74953631010"><div class="ya-phone-uvr">+7 (495) 363-10-10</div></a>
+            </div>
+            <div class="footer__content">
+                <div class="grid grid--small grid-col--1-4">
+                    <ul class="list">
+                        <li><a href="#" class="title">Недвижимость</a></li>
+                        <li><a href="#">Квартиры, комнаты</a></li>
+                        <li><a href="#">Новостройки</a></li>
+                        <li><a href="#">Аренда квартир, комнат</a></li>
+                        <li><a href="#">Коттеджи, таунхаусы, участки</a></li>
+                        <li><a href="#">Коттеджные поселки</a></li>
+                        <li><a href="#">Аренда коттеджей</a></li>
+                        <li><a href="#">Нежилые помещения</a></li>
+                        <li><a href="#">Аренда нежилых помещений</a></li>
+
+                    </ul>
+
+                    <ul class="list">
+                        <li><a href="#" class="title">Услуги</a></li>
+                        <li><a href="#">Обмен квартир</a></li>
+                        <li><a href="#">Помощь в получении ипотеки</a></li>
+                        <li><a href="#">Продать квартиру, комнату</a></li>
+                        <li><a href="#">Оценка недвижимости</a></li>
+                        <li><a href="#">Согласование перепланировок</a></li>
+                        <li><a href="#">Согласование отдельного входа</a></li>
+                        <li><a href="#">Лизинговые услуги</a></li>
+                        <li><a href="#" class="title">Все услуги</a></li>
+                    </ul>
+
+                    <ul class="list">
+                        <li><a href="#" class="title">Карьера</a></li>
+                        <li><a href="#" class="title">Ипотека</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Учебный центр</a></li>
+                    </ul>
+
+                    <ul class="list">
+                        <li><a href="#" class="title">О компании</a></li>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Награды</a></li>
+                        <li><a href="#">Отзывы клиентов</a></li>
+                        <li><a href="#" class="title">Наши офисы</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
