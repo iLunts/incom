@@ -88,6 +88,7 @@
     border-radius: @button-border-radius;
     line-height: @button-height;
     color: #fff;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 
     // Modificator 'button--green'
     &--green{
@@ -102,6 +103,18 @@
         border: 1px solid #728e21;
         border-top: 1px solid #83a425;
         border-bottom: 1px solid #5c731c;
+
+        &:hover{
+            background: #7dae23;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7dae23), to(#b1ce3b));
+            background: -webkit-linear-gradient(#7dae23, #b1ce3b);
+            background: -moz-linear-gradient(#7dae23, #b1ce3b);
+            background: -ms-linear-gradient(#7dae23, #b1ce3b);
+            background: -o-linear-gradient(#7dae23, #b1ce3b);
+            background: linear-gradient(#7dae23, #b1ce3b);
+            -pie-background: linear-gradient(#7dae23, #b1ce3b);
+            color: #fff;
+        }
     }
 }
 

@@ -5,52 +5,17 @@
 //
 // Component:       `panel`
 //
-// Sub-objects:     `panel__title`
-//                  `panel__badge`
-//                  `panel__teaser`
-//                  `panel__footer`
+// Sub-objects:     `panel__*`
+//                  `panel__*`
+//                  `panel__*`
+//                  `panel__*`
 //
-// Modifiers:       `panel--box`
-//                  `panel--box-hover`
-//                  `panel--white`
-//                  `panel--box-primary`
-//                  `panel--box-primary-hover`
-//                  `panel--box-secondary`
-//                  `panel--box-secondary-hover`
-//                  `panel--hover`
-//                  `panel--border`
-//                  `panel--header`
-//                  `panel--dashed`
-//                  `panel--divider`
-//                  `panel--border`
-//                  `panel--shadow`
-//
-//                  `panel__booking--calendar`
-//                  `panel__booking--cart`
-//                  `panel__booking--hall`
-//
-//                  `panel__teaser--left`
-//
-//
-//                  `panel--border-right`
-//                  `panel--border-bottom`
-//
-//                  `panel--border--yellow`
-//
-//                  `panel__title--box`
-////
-// Markup:
-//
-// <!-- panel -->
-// <div class="panel">
-//     <div class="panel__badge badge"></div>
-//     <h3 class="panel__title"></h3>
-//     <p></p>
-// </div>
+// Modifiers:       `panel--*`
+//                  `panel--*`
+//                  `panel--*`
+//                  `panel--*`
 //
 // ========================================================================
-
-
 // Variables
 // ========================================================================
 
@@ -83,4 +48,59 @@
     &--white{
         background: @panel-white-background;
     }
+
+    // Modificator 'panel--info'
+    &--info{
+        position: relative;
+        margin: 30px 0 70px 0;
+
+        & > p{
+            font-family: Georgia, Serif;
+            font-size: 18px;
+            line-height: 22px;
+            color: #373737;
+            font-weight: bold;
+            font-style: italic;
+            margin-left: 60px;
+        }
+    }
+
+    // Element 'panel__icon'
+    &__icon{
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        text-align: center;
+        transform: translateY(-50%);
+
+        & > i{
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            margin-top: -5px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid #99bf30;
+        }
+
+        // Modificator 'panel__icon--green'
+        &&--green{
+            background: #afcd3a;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#afcd3a), to(#81b025));
+            background: -moz-linear-gradient(#afcd3a, #81b025);
+            background: -o-linear-gradient(#afcd3a, #81b025);
+            background: linear-gradient(#afcd3a, #81b025);
+            -pie-background: linear-gradient(#afcd3a, #81b025);
+            color: #fff;
+            font-family: "Trebuchet MS", "Helvetica CY", sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
 }

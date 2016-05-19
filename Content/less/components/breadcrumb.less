@@ -1,0 +1,53 @@
+// out: ../../css/components/breadcrumb.css, compress: true
+// Name:            breadcrumb
+// Description:     Defines styles for breadcrumb
+//
+// Component:       `breadcrumb`
+//
+// Sub-objects:     `breadcrumb__*`
+//                  `breadcrumb__*`
+//
+// Modifiers:       `breadcrumb--*`
+//                  `breadcrumb--*`
+//                  `breadcrumb--*`
+//
+//
+//
+// ========================================================================
+// Variables
+// ========================================================================
+
+
+
+/* ========================================================================
+   Component: breadcrumb
+ ========================================================================== */
+
+.breadcrumb{
+    margin: 20px 0 0 0;
+    padding: 0;
+
+    & li{
+        display: inline-block;
+        margin-right: 10px;
+        color: #989898;
+        font-size: 11px;
+
+        & > a{
+            position: relative;
+            color: #989898;
+            border-bottom: 1px solid;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+            &:after{
+                content: '>';
+                position: absolute;
+                right: -10px;
+            }
+        }
+
+        & > span{
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+        }
+    }
+}

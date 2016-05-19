@@ -1,0 +1,1 @@
+.breadcrumb{margin:20px 0 0 0;padding:0}.breadcrumb li{display:inline-block;margin-right:10px;color:#989898;font-size:11px}.breadcrumb li>a{position:relative;color:#989898;border-bottom:1px solid;font-family:"Trebuchet MS",Helvetica,sans-serif}.breadcrumb li>a:after{content:'>';position:absolute;right:-10px}.breadcrumb li>span{font-family:"Trebuchet MS",Helvetica,sans-serif}
