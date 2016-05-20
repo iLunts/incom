@@ -66,7 +66,7 @@
 
     // Midificator 'input--select'
     &--select{
-        padding: @input-padding (@input-padding * 2);    
+        padding: @input-padding (@input-padding * 2);
         height: 42px;
         font-size: 18px;
     }
@@ -89,5 +89,33 @@
     // Modificator `label--rounded`
     &--rounded{
         margin-left: 10px;
+    }
+}
+
+// *********************************************************
+//                        SELECT
+// *********************************************************
+
+@select-mini-height:                         25px;
+
+// ---------------------------------------------------------
+.input__group{
+    display: inline-block;
+
+    & > span,
+    & > b{
+        line-height: 25px;
+    }
+}
+
+.select{
+    outline: none;
+    cursor: pointer;
+
+    // Modificator 'select--mini'
+    &--mini{
+        height: @select-mini-height;
+        border-radius: 3px;
+        min-width: 120px;
     }
 }

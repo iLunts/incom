@@ -109,6 +109,22 @@
         }
     }
 
+    // Modificator 'button--check'
+    &--check{
+
+        &.active{
+            text-shadow: #666666 1px 1px 1px;
+            background: #61a4f1;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#4c90ee), to(#77b8f4));
+            background: -moz-linear-gradient(#4c90ee, #77b8f4);
+            background: -o-linear-gradient(#4c90ee, #77b8f4);
+            -pie-background: linear-gradient(#4c90ee, #77b8f4);
+            color: #fff;
+            border: 1px solid #0854a3;
+            border-bottom: 1px solid #024599;
+        }
+    }
+
     // Modificator 'button--find'
     &--find{
         height: 69px;
@@ -159,6 +175,7 @@ select + .button{
         height: @button-mini-height;
         line-height: @button-mini-height;
         font-size: 1rem;
+        padding: 0 8px;
     }
 
     // Modificator 'button--small'

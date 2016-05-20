@@ -11,20 +11,38 @@
             <div class="col--5-6">
                 <div>
                     <div class="button__group">
-                        <a class="button button--mini" href="#/" uib-btn-checkbox>Комната</a>
-                        <a class="button button--mini" href="#/" uib-btn-checkbox>Доля</a>
+                        <a class="button button--mini button--check" href="" data-ng-model="room" uib-btn-checkbox>Комната</a>
+                        <a class="button button--mini button--check" href="" data-ng-model="part" uib-btn-checkbox>Доля</a>
                     </div>
-                    <div class="button__group">
-                        <a class="button button--mini" href="#/">1</a>
-                        <a class="button button--mini" href="#/">2</a>
-                        <a class="button button--mini" href="#/">3</a>
-                        <a class="button button--mini" href="#/">4+</a>
+                    <div class="button__group button__group--divider">
+                        <a class="button button--mini button--check" href="" data-ng-model="one" uib-btn-checkbox>1</a>
+                        <a class="button button--mini button--check" href="" data-ng-model="two" uib-btn-checkbox>2</a>
+                        <a class="button button--mini button--check" href="" data-ng-model="three" uib-btn-checkbox>3</a>
+                        <a class="button button--mini button--check" href="" data-ng-model="four" uib-btn-checkbox>4+</a>
                     </div>
                     <span class="margin--top-mini">- комн.</span>
 
-                    <a class="button button--mini" href="#/">гараж</a>
+                    <a class="button button--mini button--check" href="" data-ng-model="car" uib-btn-checkbox>гараж</a>
+
+                    <div class="input__group">
+                        <span>Цена</span>
+                        <select class="select select--mini">
+                            <option>мин.</option>
+                            <option>1 млн.</option>
+                            <option>3 млн.</option>
+                            <option>5 млн.</option>
+                        </select>
+                        <span> — </span>
+                        <select class="select select--mini">
+                            <option>макс.</option>
+                            <option>1 млн.</option>
+                            <option>3 млн.</option>
+                            <option>5 млн.</option>
+                        </select>
+                        <b>₽</b>
+                    </div>
                 </div>
-                <div class="margin--top">
+                <div class="margin--top-small">
                     <a class="button button--small" href="#/">метро</a>
                     <a class="button button--small" href="#/">улица</a>
                     <a class="button button--small" href="#/">район</a>
@@ -37,4 +55,55 @@
             </div>
         </div>
     </div>
+
+    <h3>Воспользуйтесь быстрым поиском по базе квартир в Москве</h3>
+
+    <div class="grid grid-col--1-3">
+        <ul class="list">
+            <li><i><a href="/sale-realty/flats/prodazha-kvartir-gorod-moskva/?or=Y">Комнаты</a></i></li>
+            <li><i><a href="/sale-realty/flats/prodazha-odnokomnatnykh-kvartir-gorod-moskva/">1-комнатные квартиры</a></i></li>
+        </ul>
+        <ul class="list">
+            <li><i><a href="/sale-realty/flats/prodazha-dvukhkomnatnykh-kvartir-gorod-moskva/">2-комнатные квартиры</a></i></li>
+            <li><i><a href="/sale-realty/flats/prodazha-trekhkomnatnykh-kvartir-gorod-moskva/">3-комнатные квартиры</a></i></li>
+        </ul>
+        <ul class="list">
+            <li><i><a href="/sale-realty/flats/prodazha-kvartir-gorod-moskva/?rc[]=4">4-комнатные квартиры и более</a></i></li>
+        </ul>
+    </div>
+
+    <ul class="grid grid-col--1-5 text--center">
+        <li>
+            <a href="/uslugi/pokupka-kvartir-i-komnat/">
+                <img src="/Content/img/cat-1/icon00.png">
+                <p>Услуга <br>Купить квартиру</p>
+            </a>
+        </li>
+        <li>
+            <a href="/uslugi/prodat-kvartiru-i-komnatu/">
+                <img src="/Content/img/cat-1/icon04.png">
+                <p>Услуга <br>Продать квартиру</p>
+            </a>
+        </li>
+
+        <li>
+            <a href="/uslugi/obmen-kvartir/">
+                <img src="/Content/img/cat-1/icon02.png">
+                <p>Обмен квартир</p>
+            </a>
+        </li>
+
+        <li>
+            <a href="/ipoteka/">
+                <img src="/Content/img/cat-1/icon03.png">
+                <p>Акции по ипотеке</p>
+            </a>
+        </li>
+        <li>
+            <a href="/offices/">
+                <img class="cr3" src="/Content/img/cat-1/offices-smaller.png">
+                <p>Наши офисы</p>
+            </a>
+        </li>
+    </ul>
 </div>
