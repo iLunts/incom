@@ -5,40 +5,12 @@
 // Component:       `button`
 //
 // Sub-objects:     `button__group`
-//                  `button__dropdown`
+//                  `button__*`
 //
-// Modifiers:       `button--primary`
-//                  `button--success`
-//                  `button--danger`
-//                  `button--warnind`
-//                  `button--rounded`
-//                  `button--delete`
-//                  `button--link`
-//                  `button--mini`
-//                  `button--small`
-//                  `button--large`
-//                  `button--upload`
-//
-// States:          `active`
-//
-// Markup:
-//
-// <!-- button__group -->
-// <div class="button__group">
-//     <button class="button"></button>
-//     <button class="button"></button>
-// </div>
-//
-// <!-- button__dropdown -->
-// <div class="button__dropdown" data-uk-dropdown>
-//     <button class="button"></button>
-//     <div class="dropdown dropdown--small">
-//         <ul class="nav nav__dropdown">
-//             <li><a href=""></a></li>
-//         </ul>
-//     </div>
-// </div>
-//
+// Modifiers:       `button--*`
+//                  `button--*`
+//                  `button--*`
+//                  `button--*`
 //
 // ========================================================================
 
@@ -49,6 +21,8 @@
 @button-height:                          42px;
 @button-padding:                         20px;
 @button-border-radius:                   3px;
+
+@button-small-height:                    30px;
 
 /* ========================================================================
    Component: Button
@@ -87,8 +61,25 @@
     font-size: 22px;
     border-radius: @button-border-radius;
     line-height: @button-height;
-    color: #fff;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -webkit-appearance: none;
+    border: none;
+    overflow: visible;
+    color: #666;
+    text-transform: none;
+    padding: 0 12px;
+    background: #f7f7f7;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom-color: rgba(0,0,0,.3);
+    background-origin: border-box;
+    background-image: -webkit-linear-gradient(top,#fff,#eee);
+    background-image: linear-gradient(to bottom,#fff,#eee);
+
+    &:not(:disabled) {
+        cursor: pointer;
+    }
 
     // Modificator 'button--green'
     &--green{
@@ -103,6 +94,7 @@
         border: 1px solid #728e21;
         border-top: 1px solid #83a425;
         border-bottom: 1px solid #5c731c;
+        color: #fff;
 
         &:hover{
             background: #7dae23;
@@ -116,8 +108,118 @@
             color: #fff;
         }
     }
+
+    // Modificator 'button--find'
+    &--find{
+        height: 69px;
+        font-size: 32px;
+        line-height: 59px;
+        text-align: center;
+        border-radius: 10px;
+        color: #ffffff;
+        border: 4px solid #fff;
+        font-family: "Trebuchet MS", "Helvetica CY", sans-serif;
+        box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+
+        background: rgb(122,187,245); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(122,187,245,1) 0%, rgba(74,143,237,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(122,187,245,1) 0%,rgba(74,143,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(122,187,245,1) 0%,rgba(74,143,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abbf5', endColorstr='#4a8fed',GradientType=0 ); /* IE6-9 */
+
+        &:hover{
+            color: #fff;
+            background: rgb(74,143,237); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(74,143,237,1) 0%, rgba(122,187,245,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(74,143,237,1) 0%,rgba(122,187,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(74,143,237,1) 0%,rgba(122,187,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a8fed', endColorstr='#7abbf5',GradientType=0 ); /* IE6-9 */
+
+        }
+    }
 }
 
 select + .button{
     margin-left: 6px;
+}
+
+
+// ****************************************************
+//                    Size
+// ****************************************************
+
+@button-mini-height:                             25px;
+
+//-----------------------------------------------------
+
+.button{
+
+    // Modificator 'button--mini'
+    &&--mini{
+        height: @button-mini-height;
+        line-height: @button-mini-height;
+        font-size: 1rem;
+    }
+
+    // Modificator 'button--small'
+    &--small{
+        height: @button-small-height;
+        line-height: @button-small-height - 4;
+        font-size: 1.2rem;
+    }
+}
+
+
+// ******************************************************
+//                 Button__group
+// ******************************************************
+
+.button__group {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+
+    // border for first button
+    & > .button:first-child,
+    & > div:first-child .button{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    // border for not first and last button
+    & > .button:not(:first-child):not(:last-child),
+    & > div:not(:first-child):not(:last-child) .button{
+        border-radius: 0;
+    }
+
+    // border for last button
+    & > .button:last-child,
+    & > div:last-child .button{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    & > .button:nth-child(n+2),
+    & > div:nth-child(n+2) .button{
+        margin-left: -1px;
+    }
+
+    & .button{
+        vertical-align: top;
+    }
+
+    & *{
+        display: inline-block;
+        font-size: 1rem;
+    }
+
+    & > span{
+        vertical-align: baseline;
+    }
+
+    & + .button__group{
+        margin-left: 6px;
+    }
 }

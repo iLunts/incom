@@ -51,38 +51,6 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-    // Modifiers:       `text--h*`
-    // ***** h1-h6
-    &--h1 {
-        font-size: 2.2rem;
-        line-height: 3rem;
-        font-weight: 100;
-    }
-    &--h2 {
-        font-size: 2rem;
-        line-height: 2.6rem;
-        font-weight: 100;
-    }
-    &--h3 {
-        font-size: 1.6rem;
-        line-height: 2rem;
-        font-weight: 100;
-    }
-    &--h4 {
-        font-size: 1.2rem;
-        line-height: 2rem;
-        font-weight: 100;
-    }
-    &--h5 {
-        font-size: 1rem;
-        line-height: 1.8rem;
-        font-weight: 100;
-    }
-    &--h6 {
-        font-size: 0.9rem;
-        line-height: 1.2rem;
-        font-weight: 100;
-    }
 
     // ****** Text color variation;
     &--green{
@@ -111,6 +79,46 @@
             color: darken(@text-color-orange, 5%);
         }
     }
+}
+
+
+// Modifiers:       `text--h*`
+// ***** h1-h6
+h1,
+.text--h1 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: 100;
+}
+h2,
+.text--h2 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 100;
+}
+h3,
+.text--h3 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 100;
+}
+h4,
+.text--h4 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 100;
+}
+h5,
+.text--h5 {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 100;
+}
+h6,
+.text--h6 {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 100;
 }
 
 ///// Link
