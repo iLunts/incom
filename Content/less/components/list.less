@@ -16,6 +16,10 @@
 .list {
     margin-top: 20px;
 
+    & > li{
+        line-height: 20px;
+    }
+
     // Element 'list__teaser'
     &__teaser{
         display: inline-block;
@@ -39,5 +43,15 @@
         display: block;
         text-align: left;
         margin: 5px 0;
+    }
+
+    // Element 'list__price'
+    &__price{
+        display: block;
+        font-size: 18px;
+        color: #710909;
+        font-weight: 500;
+        margin-top: 8px;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
 }

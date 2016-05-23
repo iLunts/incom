@@ -94,6 +94,8 @@
         border: 1px solid #728e21;
         border-top: 1px solid #83a425;
         border-bottom: 1px solid #5c731c;
+        text-shadow: 1px 1px 1px #708e21;
+        font-size: 20px;
         color: #fff;
 
         &:hover{
@@ -131,7 +133,7 @@
         font-size: 32px;
         line-height: 59px;
         text-align: center;
-        border-radius: 10px;
+        border-radius: 6px;
         color: #ffffff;
         border: 4px solid #fff;
         font-family: "Trebuchet MS", "Helvetica CY", sans-serif;
@@ -165,6 +167,7 @@ select + .button{
 // ****************************************************
 
 @button-mini-height:                             25px;
+@button-medium-height:                             35px;
 
 //-----------------------------------------------------
 
@@ -179,10 +182,17 @@ select + .button{
     }
 
     // Modificator 'button--small'
-    &--small{
+    &&--small{
         height: @button-small-height;
         line-height: @button-small-height - 4;
         font-size: 1.2rem;
+    }
+
+    // Modificator 'button--medium'
+    &&--medium{
+        height: @button-medium-height;
+        line-height: @button-medium-height - 2;
+        font-size: 18px;
     }
 }
 
