@@ -1,0 +1,100 @@
+// out: ../../css/components/question-board.css, compress: true
+// Name:            breadcrumb
+// Description:     Defines styles for breadcrumb
+//
+// Component:       `breadcrumb`
+//
+// Sub-objects:     `breadcrumb__*`
+//                  `breadcrumb__*`
+//
+// Modifiers:       `breadcrumb--*`
+//                  `breadcrumb--*`
+//                  `breadcrumb--*`
+//
+//
+//
+// ========================================================================
+// Variables
+// ========================================================================
+
+
+
+/* ========================================================================
+   Component: breadcrumb
+ ========================================================================== */
+
+.question-board{
+
+    // Element 'question-board__link'
+    &__link{
+        display: block;
+        padding-bottom: 14px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #034DA2;
+        text-decoration: underline;
+        font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    }
+
+    // Element 'question-board__info'
+    &__info{
+        font-style: italic;
+        font-size: 14px;
+        color: #999999;
+        font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+
+        & a{
+            font-family: Georgia,serif;
+            color: #54770e;
+            font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+        }
+    }
+
+    & .left{
+        float: left;
+        width: 590px;
+    }
+
+    & .right{
+        float: right;
+        width: 280px;
+        border-left: 1px solid #e2e2e2;
+        font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+
+        & > a{
+            float: right;
+            font-style: italic;
+            width: 170px;
+            line-height: 16px;
+            text-decoration: underline;
+        }
+    }
+
+    // Element 'question-board__avatar'
+    &__avatar{
+        display: inline-block;
+        border-radius: 100px;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 0 20px;
+    }
+
+    & > li {
+        padding-bottom: 15px;
+
+        & + li{
+            padding: 26px 0 15px;
+        }
+    }
+
+    & > li:after{
+        content: '\0020';
+        display: block;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        clear: both;
+    }
+}
