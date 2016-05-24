@@ -37,20 +37,6 @@
     padding: 0;
 }
 
-/*
- * 1. Correct inability to style clickable `input` types in iOS.
- * 2. Remove margins in Chrome, Safari and Opera.
- * 3. Remove borders for `button`.
- * 4. Address `overflow` set to `hidden` in IE 8/9/10/11.
- * 5. Correct `font` properties and `color` not being inherited for `button`.
- * 6. Address inconsistent `text-transform` inheritance which is only inherit in Firefox and IE
- * 7. Style
- * 8. `line-height` is used to create a height
- * 9. `min-height` is necessary for `input` elements in Firefox and Opera because `line-height` is not working.
- * 10. Reset button group whitespace hack
- * 11. Required for `a`.
- */
-
 .button {
     display: inline-block;
     height: @button-height;
@@ -153,6 +139,23 @@
             background: linear-gradient(to bottom,  rgba(74,143,237,1) 0%,rgba(122,187,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a8fed', endColorstr='#7abbf5',GradientType=0 ); /* IE6-9 */
 
+        }
+    }
+
+    // Modificator 'button--more'
+    &--more{
+        height: 34px;
+        border-radius: 0;
+        line-height: 34px;
+        font-size: 14px;
+        background: #fff;
+        border: 1px solid #dddddd;
+        color: #515151;
+
+        &:hover{
+            color: #f47d26;
+            background-color: #f9f9f9;
+            border-color: #dddddd;
         }
     }
 }
