@@ -1,0 +1,121 @@
+// out: ../../css/components/table.css, compress: true
+// Name:            Table
+// Description:     Defines styles for Table
+//
+// Component:       `table`
+//
+// Sub-objects:     `table__*`
+//                  `table__*`
+//
+// Modifiers:       `table--*`
+//                  `table--*`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+
+/* ========================================================================
+   Component: Table
+ ========================================================================== */
+
+table{
+    width: 100%;
+}
+
+.table-search{
+    width: 100%;
+    // border-radius: 3px 3px 0 0;
+    // overflow: hidden;
+
+    & thead{
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+        color: #aad4ff;
+        font-weight: bold;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+        background: rgb(2,58,140); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(2,58,140,1) 1%, rgba(4,92,183,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(2,58,140,1) 1%,rgba(4,92,183,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(2,58,140,1) 1%,rgba(4,92,183,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023a8c', endColorstr='#045cb7',GradientType=0 ); /* IE6-9 */
+
+        & th{
+            font-weight: 100;
+            text-align: left;
+
+            & a{
+                color: #aad4ff;
+                border-bottom: 1px dotted;
+
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    & tbody{
+
+        & tr{
+            min-height: 80px;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+
+            &:nth-child(even){
+                background: #f5f7f9;
+            }
+
+            &:hover{
+                background: #eef9c4;
+            }
+
+            & td{
+                vertical-align: middle;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                color: #555555;
+
+                & a{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    // Element 'table-search__img'
+    &__img{
+        position: relative;
+        display: inline-block;
+        margin: 2px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    // Element 'table-search__badge'
+    &__badge{
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+
+        & i{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            background: #024296;
+            color: #fff;
+            border: 1px solid #fff;
+            line-height: 13px;
+            font-size: 10px;
+            font-style: normal;
+            text-align: center;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            cursor: default;
+        }
+    }
+}

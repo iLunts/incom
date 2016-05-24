@@ -6,6 +6,9 @@ app.controller("homeController", function ($scope) {
 app.controller("flatController", function ($scope) {
 });
 
+app.controller("searchController", function ($scope) {
+});
+
 app.config(function($routeProvider){
         $routeProvider.when('/',
         {
@@ -22,6 +25,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/sale-realty/flats.html',
             controller:'flatController'
+        });
+
+        $routeProvider.when('/sale-realty/flats/search',
+        {
+            templateUrl:'views/sale-realty/search.html',
+            controller:'searchController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
