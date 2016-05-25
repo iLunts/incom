@@ -122,3 +122,33 @@ table{
         }
     }
 }
+
+
+// *********************************************************
+//                        TABLE
+// *********************************************************
+// Variable
+
+@table-striped-odd-background:                     #eff3f7;
+
+// ---------------------------------------------------------
+.table{
+    width: 100%;
+
+    // Modificator 'table--striped'
+
+    &--striped{
+        & tbody tr{
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            line-height: 16px;
+
+            &:nth-child(odd){
+                background: @table-striped-odd-background;
+            }
+
+            & td{
+                padding: 4px 6px;
+            }
+        }
+    }
+}
