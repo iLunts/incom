@@ -119,3 +119,59 @@
         min-width: 120px;
     }
 }
+
+
+
+// *********************************************************
+//                   CHECKBOX/RADIO
+// *********************************************************
+
+.radio, .checkbox {
+    display: none;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.checkbox {
+
+    & + .label--checkbox {
+        display: inline-block;
+        padding-left: 30px;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #AAAEB2;
+            border-radius: 3px;
+        }
+    }
+
+    &:checked + .label--checkbox:after {
+        content: '\e5ca';
+        font-family: 'icomoon';
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        color: #034DA2;
+        border-radius: 4px;
+    }
+}
+
+.label--checkbox {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.87);
+    text-transform: lowercase;
+    cursor: pointer;
+}

@@ -14,27 +14,7 @@
 //                  `navbar--navbar`
 //                  `navbar--offcanvas`
 //
-// States:          `active`
-//                  `parent`
-//                  `open`
-//                  `touch`
-//
-// Uses:            Icon: FontAwesome or icoMoon
-//
-// Used by:         Panel
-//                  Dropdown
-//
-// Markup:
-//
-// <!-- nav -->
-// <ul class="navbar">
-//     <li class="active"><a href=""></a></li>
-//     <li><a href=""></a></li>
-// </ul>
-//
 // ========================================================================
-
-
 // Variables
 // ========================================================================
 
@@ -64,6 +44,7 @@
 
     & > li{
         display: inline-block;
+        margin-right: -4px;
 
         & > a{
             display: block;
@@ -76,6 +57,15 @@
             text-decoration: none;
             text-shadow: 1px 1px 1px #09508b;
             background: none;
+
+            &.active{
+                background: rgb(122,187,245); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(122,187,245,1) 0%, rgba(74,143,237,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(122,187,245,1) 0%,rgba(74,143,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(122,187,245,1) 0%,rgba(74,143,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abbf5', endColorstr='#4a8fed',GradientType=0 ); /* IE6-9 */
+
+            }
         }
         &:hover{
             & > a{
@@ -93,10 +83,10 @@
                 }
             }
 
-            & > .navbar__dropdown{
-                display: block;
-                transition: 200ms;
-            }
+            // & > .navbar__dropdown{
+            //     display: block;
+            //     transition: 200ms;
+            // }
         }
     }
 }
@@ -107,45 +97,141 @@
 //             Navbar dropdown
 // ********************************************
 
-.navbar__dropdown{
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 44px;
-    padding: 6px 0 0 0;
-    width: auto;
-    border: 1px solid #055aab;
-    background-color: #f9f9f9;
-    // margin-top: 6px;
-    padding: 30px;
-    border-radius: 3px;
-    transition: 200ms;
-    z-index: 999999;
+// .navbar__dropdown{
+//     display: none;
+//     position: absolute;
+//     left: 0;
+//     top: 44px;
+//     padding: 6px 0 0 0;
+//     width: auto;
+//     border: 1px solid #055aab;
+//     background-color: #f9f9f9;
+//     padding: 30px;
+//     border-radius: 3px;
+//     transition: 200ms;
+//     z-index: 999999;
+//
+//     & ul{
+//         display: inline-block;
+//         margin-right: 32px;
+//         text-align: left;
+//         vertical-align: top;
+//
+//         & span{
+//             display: inline-block;
+//             margin: 10px 0;
+//             font-family: Georgia, serif;
+//             font-size: 20px;
+//             color: #034da2;
+//         }
+//
+//         & a{
+//             margin: 6px 0 0 0;
+//             font-family: "Trebuchet MS", Helvetica, sans-serif;
+//             font-size: 14px;
+//             font-style: italic;
+//             line-height: 28px;
+//             border-bottom: 1px solid;
+//         }
+//     }
+// }
 
-    & ul{
-        display: inline-block;
-        margin-right: 32px;
-        text-align: left;
-        vertical-align: top;
 
-        & span{
-            display: inline-block;
-            margin: 10px 0;
-            font-family: Georgia, serif;
-            font-size: 20px;
-            color: #034da2;
-        }
+.navbar{
+    .dropdown{
+        position: relative;
 
-        & a{
-            margin: 6px 0 0 0;
-            font-family: "Trebuchet MS", Helvetica, sans-serif;
-            font-size: 14px;
-            font-style: italic;
-            line-height: 28px;
-            border-bottom: 1px solid;
+        &-menu{
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 1000;
+            display: none;
+            width: auto;
+            min-width: 160px;
+            margin: 8px 0 0;
+            text-align: left;
+            list-style: none;
+            border: 1px solid #055aab;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 3px;
+            transition: 200ms;
+
+            // &:before{
+            //     content: '';
+            //     position: absolute;
+            //     display: block;
+            //     top: -7px;
+            //     left: 50%;
+            //     margin-left: -4px;
+            //     width: 0;
+            //     height: 0;
+            //     border-left: 7px solid transparent;
+            //     border-right: 7px solid transparent;
+            //     border-bottom: 7px solid #055aab;
+            // }
+            // &:after{
+            //     content: '';
+            //     position: absolute;
+            //     display: block;
+            //     top: -6px;
+            //     left: 50%;
+            //     margin-left: -4px;
+            //     width: 0;
+            //     height: 0;
+            //     border-left: 7px solid transparent;
+            //     border-right: 7px solid transparent;
+            //     border-bottom: 7px solid #f9f9f9;
+            // }
+
+            &--1-3{
+                & > ul{
+                    width: 33%;
+
+                    & + ul{
+                        margin-left: 0.3%;
+                    }
+
+                }
+            }
+
+            & ul{
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+                margin-right: -4px;
+
+                // & + ul{
+                //     margin-left: 32px;
+                // }
+
+                & span{
+                    display: inline-block;
+                    margin: 10px 0;
+                    font-family: Georgia, serif;
+                    font-size: 20px;
+                    color: #034da2;
+                }
+
+                & a{
+                    margin: 6px 0 0 0;
+                    font-family: "Trebuchet MS", Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-style: italic;
+                    line-height: 28px;
+                    border-bottom: 1px solid;
+                }
+            }
         }
     }
+
+    // State 'open'
+    .open > .dropdown-menu {
+        display: block;
+    }
 }
+
 
 
 

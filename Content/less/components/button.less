@@ -113,6 +113,26 @@
         }
     }
 
+    // Modificator 'button--border'
+    &--border{
+        background: #fff;
+        border: 1px solid #034da2;
+        color: #034da2;
+        font-style: italic;
+        font-family: Georgia,serif;
+
+        &:hover{
+            background: #055bab;
+            color: #ffffff !important;
+            border-bottom: 1px solid #055aab;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#024195), to(#055aab));
+            background: -moz-linear-gradient(#024195, #055aab);
+            background: -o-linear-gradient(#024195, #055aab);
+            -pie-background: linear-gradient(#024195, #055aab);
+            color: #fff;
+        }
+    }
+
     // Modificator 'button--find'
     &--find{
         height: 69px;
