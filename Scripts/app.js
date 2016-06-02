@@ -48,6 +48,9 @@ app.controller("homeController", function ($scope) {
 app.controller("flatController", function ($scope) {
 });
 
+app.controller("newbuildController", function ($scope) {
+});
+
 app.controller("nedvizhimostController", function ($scope) {
 });
 
@@ -59,6 +62,7 @@ app.controller("officesController", function ($scope) {
 
 app.controller("searchResultController", function ($scope) {
 });
+
 
 
 // Route
@@ -78,6 +82,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/sale-realty/flats.html',
             controller:'flatController'
+        });
+
+        $routeProvider.when('/sale-realty/newbuild',
+        {
+            templateUrl:'views/sale-realty/newbuild.html',
+            controller:'newbuildController'
         });
 
         $routeProvider.when('/offices',
