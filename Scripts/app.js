@@ -63,6 +63,9 @@ app.controller("officesController", function ($scope) {
 app.controller("searchResultController", function ($scope) {
 });
 
+app.controller("searchDomaController", function ($scope) {
+});
+
 
 
 // Route
@@ -106,6 +109,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/sale-realty/search-result.html',
             controller:'searchResultController'
+        });
+
+        $routeProvider.when('/prodazha-domov-kottedzhej/',
+        {
+            templateUrl:'views/sale-realty/prodazha-domov-kottedzhej.html',
+            controller:'searchDomaController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});

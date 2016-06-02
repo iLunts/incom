@@ -1,0 +1,112 @@
+// out: ../../css/components/build.css, compress: true
+// Name:            build
+// Description:     Defines styles to create layouts with build
+//
+// Component:       `build__*`
+//
+// ========================================================================
+
+
+
+/* ========================================================================
+   Component: build
+ ========================================================================== */
+.list--build{
+    float: left;
+
+    &:after{
+        content: '';
+        clear: both;
+    }
+}
+
+.build {
+    float: left;
+    width: 226px;
+    height: 250px;
+    position: relative;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    margin: 0 10px 20px 0;
+
+    &:nth-child(even){
+        margin-right: 0;
+    }
+
+    // Element 'build__desc'
+    &__desc{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 30px;
+        font-size: 12px;
+        display: block;
+        width: 100%;
+        color: #373737;
+
+        &-info{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: 8px 5px 7px 6px;
+            line-height: 16px;
+            width: 55%;
+            border-top: 1px solid #fff;
+
+            background: rgb(233,245,255); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(233,245,255,1) 0%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(233,245,255,1) 0%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(233,245,255,1) 0%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f5ff', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+        }
+
+        &-price{
+            display: block;
+            float: right;
+            width: 45%;
+            text-align: right;
+            padding: 20px 7px 7px 7px;
+            border-top: 1px solid #fff;
+            background: #fff;
+            & b{
+                font-size: 24px;
+                color: #710909;
+            }
+        }
+
+        &-ipoteka{
+            position: absolute;
+            right: 0;
+            bottom: 90px;
+            display: block;
+            padding: 3px 0;
+            width: 45%;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 14px;
+
+            background: rgb(179,208,62); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(179,208,62,1) 0%, rgba(135,181,38,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(179,208,62,1) 0%,rgba(135,181,38,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(179,208,62,1) 0%,rgba(135,181,38,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d03e', endColorstr='#87b526',GradientType=0 ); /* IE6-9 */
+        }
+    }
+
+    // Element 'build__footer'
+    &__footer{
+        position: absolute;
+        background: #387fe0;
+        color: #fff;
+        padding: 5px 9px 6px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+        line-height: 13px;
+    }
+}

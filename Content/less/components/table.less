@@ -66,9 +66,12 @@ table{
     & tbody{
 
         & tr{
+            position: relative;
             min-height: 80px;
             border: 1px solid #ddd;
             vertical-align: middle;
+            font-size: 12px;
+            line-height: 14px;
 
             &:nth-child(even){
                 background: #f5f7f9;
@@ -79,11 +82,12 @@ table{
             }
 
             & td{
+                position: relative;
                 vertical-align: middle;
                 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
                 color: #555555;
 
-                & a{
+                & a:not(.link--reset){
                     text-decoration: underline;
                 }
             }
@@ -102,13 +106,15 @@ table{
     // Element 'table-search__badge'
     &__badge{
         position: absolute;
-        bottom: 4px;
-        right: 4px;
+        bottom: 2px;
+        right: 2px;
+        width: 16px;
 
         & i{
             display: inline-block;
             width: 15px;
             height: 15px;
+            margin-top: 3px;
             border-radius: 3px;
             background: #024296;
             color: #fff;
@@ -150,5 +156,52 @@ table{
                 padding: 4px 6px;
             }
         }
+    }
+}
+
+// *********************************************************
+//                     POSITION
+// *********************************************************
+
+.position{
+
+    // Modificator 'position--lider'
+    &--lider{
+        background: #FFF1B9 !important;
+        color: #373737;
+    }
+
+    // Modificator 'position--top'
+    &--top{
+        background: #EEF9C4 !important;
+        color: #373737;
+    }
+
+    // Modificator 'position--hit'
+    &--hit{
+        background: #FFF9DB !important;
+        color: #373737;
+    }
+}
+
+// *********************************************************
+//                     POSITION
+// *********************************************************
+
+.table-search{
+    & .badge--lider{
+        position: absolute;
+        top: 2px;
+        right: 7px;
+    }
+    & .badge--top{
+        position: absolute;
+        top: 2px;
+        right: 7px;
+    }
+    & .badge--hit{
+        position: absolute;
+        top: 2px;
+        right: 7px;
     }
 }
