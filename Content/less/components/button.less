@@ -28,10 +28,6 @@
    Component: Button
  ========================================================================== */
 
-/*
- * Removes inner padding and border in Firefox 4+.
- */
-
 .button::-moz-focus-inner {
     border: 0;
     padding: 0;
@@ -190,7 +186,8 @@ select + .button{
 // ****************************************************
 
 @button-mini-height:                             25px;
-@button-medium-height:                             35px;
+@button-medium-height:                           35px;
+@button-large-height:                            55px;
 
 //-----------------------------------------------------
 
@@ -216,6 +213,13 @@ select + .button{
         height: @button-medium-height;
         line-height: @button-medium-height - 2;
         font-size: 18px;
+    }
+
+    // Modificator 'button--large'
+    &&--large{
+        height: @button-large-height;
+        line-height: @button-large-height - 2;
+        font-size: 24px;
     }
 }
 

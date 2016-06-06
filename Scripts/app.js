@@ -45,25 +45,40 @@ app.controller("homeController", function ($scope) {
     $scope.property='{navigation: true, pagination: false, rewindNav : false}';
 });
 
-app.controller("flatController", function ($scope) {
-});
+app.controller("flatController", function ($scope) { });
+app.controller("newbuildController", function ($scope) { });
+app.controller("nedvizhimostController", function ($scope) { });
+app.controller("searchController", function ($scope) { });
+app.controller("officesController", function ($scope) { });
+app.controller("searchResultController", function ($scope) { });
+app.controller("searchDomaController", function ($scope) { });
 
-app.controller("newbuildController", function ($scope) {
-});
+app.controller("ipotekaController", function ($scope) {
+    $scope.oneAtATime = true;
 
-app.controller("nedvizhimostController", function ($scope) {
-});
+    $scope.groups = [
+        {
+          title: 'Dynamic Group Header - 1',
+          content: 'Dynamic Group Body - 1'
+        },
+        {
+          title: 'Dynamic Group Header - 2',
+          content: 'Dynamic Group Body - 2'
+        }
+    ];
 
-app.controller("searchController", function ($scope) {
-});
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
-app.controller("officesController", function ($scope) {
-});
+    $scope.addItem = function() {
+        var newItemNo = $scope.items.length + 1;
+        $scope.items.push('Item ' + newItemNo);
+    };
 
-app.controller("searchResultController", function ($scope) {
-});
-
-app.controller("searchDomaController", function ($scope) {
+    $scope.status = {
+        isCustomHeaderOpen: false,
+        isFirstOpen: true,
+        isFirstDisabled: false
+    };
 });
 
 
@@ -115,6 +130,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/sale-realty/prodazha-domov-kottedzhej.html',
             controller:'searchDomaController'
+        });
+
+        $routeProvider.when('/ipoteka/',
+        {
+            templateUrl:'views/ipoteka.html',
+            controller:'ipotekaController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
