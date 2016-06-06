@@ -1,0 +1,59 @@
+// out: ../../css/components/slider.css, compress: true
+// Name:            slider
+// Description:     Defines styles to create layouts with slider
+//
+// Component:       `slider__*`
+//
+// ========================================================================
+
+
+
+/* ========================================================================
+   Component: slider
+ ========================================================================== */
+.slider {
+
+    // Modificator 'slider--revew'
+    &&--review{
+        padding: 0;
+        margin: 0;
+        height: auto;
+        padding-bottom: 45px;
+
+        & .slider{
+
+            // Element 'slider__img'
+            &__img{
+                float: left;
+                width: 200px;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+            }
+
+            // Element 'slider__content'
+            &__content{
+                float: left;
+                width: ~'calc(100% - 250px)';
+                margin-left: 30px;
+                font-style: italic;
+
+            }
+
+            // Element 'slider__text'
+            &__text{
+                position: relative;
+                color: #999;
+                font-size: 14px;
+                line-height: 24px;
+
+            }
+
+            // Element 'slider__lpr'
+            &__name{
+                font-size: 14px;
+                line-height: 24px;
+                color: #555555;
+            }
+        }
+    }
+}

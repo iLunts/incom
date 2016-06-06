@@ -9,41 +9,41 @@
     </div>
 
     <div class="panel panel--box panel--box-small">
-        <ul class="grid">
+        <ul class="grid grid--small">
             <li class="col--1-4 text--center">
                 <a href="#">
-                    <span class="list__teaser"><img src="/Content/img/news/news-1.png" alt=""></span>
+                    <img src="http://www.incom.ru/images/ipoteka02.jpg" alt="">
                 </a>
-                <span class="text--italic text--georgia text--h4">
+                <p class="text--italic text--georgia text--h4 margin--top">
                     Взгляд специалиста<br>
                     по ипотеке на вашу<br>
                     жилищную проблему
-                </span>
+                </p>
             </li>
             <li class="col--1-4 text--center">
                 <a href="#">
-                    <span class="list__teaser"><img src="/Content/img/news/news-2.png" alt=""></span>
+                    <img src="http://www.incom.ru/images/ipoteka03.jpg" alt="">
                 </a>
-                <span class="text--italic text--georgia text--h4">
+                <p class="text--italic text--georgia text--h4 margin--top">
                     Подача документов<br>
                     сразу в несколько банков
-                </span>
+                </p>
             </li>
             <li class="col--1-4 text--center">
                 <a href="#">
-                    <span class="list__teaser"><img src="/Content/img/news/news-3.png" alt=""></span>
+                    <img src="http://www.incom.ru/images/ipoteka04.jpg" alt="">
                 </a>
-                <span class="text--italic text--georgia text--h4">
+                 <p class="text--italic text--georgia text--h4 margin--top">
                     Снижение процентных<br>
                     ставок для наших<br>
                     клиентов
-                </span>
+                </p>
             </li>
             <li class="col--1-4 text--center">
                 <a href="#">
-                    <span class="list__teaser"><img src="/Content/img/news/news-4.png" alt=""></span>
+                    <img src="http://www.incom.ru/images/ipoteka05.jpg" alt="">
                 </a>
-                <a href="#/" class="list__link text--italic text--georgia text--h4">
+                <a href="#/" class="link link--line text--italic text--georgia text--h4 margin--top">
                     Обширная база<br>
                     квартир по ипотеке
                 </a>
@@ -95,14 +95,16 @@
         <a href="#/" class="button button--medium">Все банки и действующие акции</a>
     </p>
 
-    <div class="margin--top-large">
-        <h2 class="text--h3">Часто задаваемые вопросы</h2>
+    <!-- <div class="margin--top-large">
+        <h2 class="text--h3">Часто задаваемые вопросы</h2> -->
+
         <!-- <uib-accordion>
             <uib-accordion-group heading="Static Header, initially expanded">
               This content is straight in the template.
             </uib-accordion-group>
         </uib-accordion> -->
-    </div>
+
+    <!-- </div> -->
 
     <p class="text--center margin--v-large">
         <a href="#/" class="button button--large button--green">Остались вопросы? Поможем!</a>
@@ -110,8 +112,16 @@
 
     <div>
         <h2 class="text--h3">Отзывы партнеров</h2>
-        <div class="panel panel--box margin--top-small">
-            123
+        <div class="panel panel--box panel--box-small">
+            <data-owl-carousel class="owl-carousel slider slider--review" data-options="{items:1, loop:true, autoplay: true, autoplaySpeed: 1000}">
+                <div owl-carousel-item data-ng-repeat="item in reviews" class="item">
+                    <img class="slider__img" data-ng-src="{{item.url}}" alt="">
+                    <div class="slider__content">
+                        <p class="slider__text">{{item.text}}</p>
+                        <p>{{item.name}}</p>
+                    </div>
+                </div>
+            </data-owl-carousel>
         </div>
     </div>
 

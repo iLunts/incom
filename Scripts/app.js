@@ -54,31 +54,38 @@ app.controller("searchResultController", function ($scope) { });
 app.controller("searchDomaController", function ($scope) { });
 
 app.controller("ipotekaController", function ($scope) {
-    $scope.oneAtATime = true;
-
-    $scope.groups = [
-        {
-          title: 'Dynamic Group Header - 1',
-          content: 'Dynamic Group Body - 1'
-        },
-        {
-          title: 'Dynamic Group Header - 2',
-          content: 'Dynamic Group Body - 2'
-        }
+    $scope.reviews = [
+        {url: 'http://www.incom.ru/upload/iblock/94d/openbank.png', text: 'Компания «Инком-Недвижимость» крупнейший партнер Банка Уралсиб по ипотечному кредитованию. Профессионализм и высокая квалификация специалистов компании подтверждается как сотрудниками Банка, так и отзывами клиентов на протяжении всего длительного периода сотрудничества. Успех «Инком-Недвижимость» обусловлен открытостью и доступностью, четким пониманием потребностей клиентов и партнеров. Мы рекомендуем «Инком-Недвижимость» и предлагаем особые условия ипотечного кредитования для клиентов компании — снижение ставки на 1% от стандартных тарифов по программам ипотечного кредитования Банка.', name: 'Директор центра ипотечного кредитования Металлинвестбанка, Станислав Кондакчян'},
+        {url: 'http://www.incom.ru/upload/iblock/d8c/ipoteka_reb.png', text: 'Абсолют Банк много лет успешно сотрудничает с компанией ИНКОМ, которая является одним из ключевых игроков на рынке недвижимости Москвы и Московской области. За время совместной работы агентство подтвердило свою репутацию надежного партнера, который имеет обширную сеть офисов, работающих по единым профессиональным стандартам. Прочные деловые отношения приносят пользу не только банку и агентству, но и тем, кто решил взять квартиру в ипотеку — для клиентов ИНКОМа ставка по кредиту на 0,5 процентных пункта ниже, чем для остальных заемщиков.', name: 'Начальник отдела продаж ипотечных кредитов Банка «УРАЛСИБ», Максим Мельников'},
+        {url: 'http://www.incom.ru/upload/iblock/9ac/metallinvest.png', text: ', совместно помогаем жителям Москвы и Московской области в решении жилищных вопросов. Считаю Компанию высококлассным экспертом в области любых операций с недвижимостью и стратегическим партнером банка. Специалисты ИНКОМа отличаются высоким профессионализмом и успешно реализуют мечты своих клиентов.', name: 'Руководитель центра Ипотечного кредитования Абсолют банка, Сергей Джамалутинов'}
     ];
 
-    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
-    $scope.addItem = function() {
-        var newItemNo = $scope.items.length + 1;
-        $scope.items.push('Item ' + newItemNo);
-    };
-
-    $scope.status = {
-        isCustomHeaderOpen: false,
-        isFirstOpen: true,
-        isFirstDisabled: false
-    };
+    // $scope.oneAtATime = true;
+    //
+    // $scope.groups = [
+    //     {
+    //       title: 'Dynamic Group Header - 1',
+    //       content: 'Dynamic Group Body - 1'
+    //     },
+    //     {
+    //       title: 'Dynamic Group Header - 2',
+    //       content: 'Dynamic Group Body - 2'
+    //     }
+    // ];
+    //
+    // $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+    //
+    // $scope.addItem = function() {
+    //     var newItemNo = $scope.items.length + 1;
+    //     $scope.items.push('Item ' + newItemNo);
+    // };
+    //
+    // $scope.status = {
+    //     isCustomHeaderOpen: false,
+    //     isFirstOpen: true,
+    //     isFirstDisabled: false
+    // };
 });
 
 
