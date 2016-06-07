@@ -42,7 +42,7 @@ app.controller("homeController", function ($scope) {
         {url: '/Content/img/slider/slide-4.jpg', alt: 'текст'},
         {url: '/Content/img/slider/slide-5.jpg', alt: 'текст'}
     ];
-    $scope.property='{navigation: true, pagination: false, rewindNav : false}';
+    // $scope.property='{navigation: true, pagination: false, rewindNav : false}';
 });
 
 app.controller("flatController", function ($scope) { });
@@ -56,6 +56,13 @@ app.controller("searchDomaController", function ($scope) { });
 // Jobs
 app.controller("vacancyController", function ($scope) { });
 app.controller("trainingCenterController", function ($scope) { });
+app.controller("successController", function ($scope) {
+    $scope.list = [
+        {url: '/Content/img/success/slide-1.jpg', alt: '123'},
+        {url: '/Content/img/success/slide-2.jpg', alt: '123'},
+        {url: '/Content/img/success/slide-3.jpg', alt: '123'}
+    ];
+});
 
 
 app.controller("ipotekaController", function ($scope) {
@@ -161,6 +168,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/jobs/training-center.html',
             controller:'trainingCenterController'
+        });
+
+        $routeProvider.when('/jobs/success/',
+        {
+            templateUrl:'views/jobs/success.html',
+            controller:'successController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
