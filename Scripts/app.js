@@ -56,6 +56,16 @@ app.controller("searchDomaController", function ($scope) { });
 // Company
 app.controller("companyController", function ($scope) { });
 app.controller("historyController", function ($scope) { });
+app.controller("reviewController", function ($scope) {
+    $scope.list = [
+        {url: '/Content/img/review/slide-1.jpg'},
+        {url: '/Content/img/review/slide-2.jpg'},
+        {url: '/Content/img/review/slide-3.jpg'},
+        {url: '/Content/img/review/slide-4.jpg'},
+        {url: '/Content/img/review/slide-5.jpg'},
+        {url: '/Content/img/review/slide-6.jpg'}
+    ]
+});
 
 
 // Jobs
@@ -192,6 +202,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/company/history.html',
             controller:'historyController'
+        });
+
+        $routeProvider.when('/company/review/',
+        {
+            templateUrl:'views/company/review.html',
+            controller:'reviewController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
