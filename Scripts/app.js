@@ -55,6 +55,7 @@ app.controller("searchDomaController", function ($scope) { });
 
 // Company
 app.controller("companyController", function ($scope) { });
+app.controller("historyController", function ($scope) { });
 
 
 // Jobs
@@ -185,6 +186,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/company/company.html',
             controller:'companyController'
+        });
+
+        $routeProvider.when('/company/history/',
+        {
+            templateUrl:'views/company/history.html',
+            controller:'historyController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
