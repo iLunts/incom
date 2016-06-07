@@ -55,6 +55,7 @@ app.controller("searchDomaController", function ($scope) { });
 
 // Jobs
 app.controller("vacancyController", function ($scope) { });
+app.controller("trainingCenterController", function ($scope) { });
 
 
 app.controller("ipotekaController", function ($scope) {
@@ -143,6 +144,12 @@ app.config(function($routeProvider){
             controller:'searchDomaController'
         });
 
+        $routeProvider.when('/ipoteka/',
+        {
+            templateUrl:'views/ipoteka.html',
+            controller:'ipotekaController'
+        });
+
         // JOBS
         $routeProvider.when('/jobs/vacancy/',
         {
@@ -150,10 +157,10 @@ app.config(function($routeProvider){
             controller:'vacancyController'
         });
 
-        $routeProvider.when('/ipoteka/',
+        $routeProvider.when('/jobs/training-center/',
         {
-            templateUrl:'views/ipoteka.html',
-            controller:'ipotekaController'
+            templateUrl:'views/jobs/training-center.html',
+            controller:'trainingCenterController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
