@@ -53,6 +53,10 @@ app.controller("officesController", function ($scope) { });
 app.controller("searchResultController", function ($scope) { });
 app.controller("searchDomaController", function ($scope) { });
 
+// Company
+app.controller("companyController", function ($scope) { });
+
+
 // Jobs
 app.controller("vacancyController", function ($scope) { });
 app.controller("trainingCenterController", function ($scope) { });
@@ -174,6 +178,13 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/jobs/success.html',
             controller:'successController'
+        });
+
+        // Company
+        $routeProvider.when('/company/company/',
+        {
+            templateUrl:'views/company/company.html',
+            controller:'companyController'
         });
 
         $routeProvider.otherwise({redirectTo: '/'});
