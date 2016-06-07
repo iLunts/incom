@@ -53,6 +53,10 @@ app.controller("officesController", function ($scope) { });
 app.controller("searchResultController", function ($scope) { });
 app.controller("searchDomaController", function ($scope) { });
 
+// Jobs
+app.controller("vacancyController", function ($scope) { });
+
+
 app.controller("ipotekaController", function ($scope) {
     $scope.reviews = [
         {url: 'http://www.incom.ru/upload/iblock/94d/openbank.png', text: 'Компания «Инком-Недвижимость» крупнейший партнер Банка Уралсиб по ипотечному кредитованию. Профессионализм и высокая квалификация специалистов компании подтверждается как сотрудниками Банка, так и отзывами клиентов на протяжении всего длительного периода сотрудничества. Успех «Инком-Недвижимость» обусловлен открытостью и доступностью, четким пониманием потребностей клиентов и партнеров. Мы рекомендуем «Инком-Недвижимость» и предлагаем особые условия ипотечного кредитования для клиентов компании — снижение ставки на 1% от стандартных тарифов по программам ипотечного кредитования Банка.', name: 'Директор центра ипотечного кредитования Металлинвестбанка, Станислав Кондакчян'},
@@ -137,6 +141,13 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/sale-realty/prodazha-domov-kottedzhej.html',
             controller:'searchDomaController'
+        });
+
+        // JOBS
+        $routeProvider.when('/jobs/vacancy/',
+        {
+            templateUrl:'views/jobs/vacancy.html',
+            controller:'vacancyController'
         });
 
         $routeProvider.when('/ipoteka/',

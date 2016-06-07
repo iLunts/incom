@@ -49,6 +49,51 @@
         }
     }
 
+    // Modificator 'panel--vacancy'
+    &--vacancy{
+        margin-bottom: 20px;
+        background: url('/Content/img/panel/vacancy-bg.png') 0 0 no-repeat;
+        cursor: pointer;
+
+        & > b{
+            display: block;
+            padding: 10px 0;
+            font-size: 24px;
+            color: #034da2;
+            font-weight: bold;
+            line-height: 20px;
+            z-index: 5;
+        }
+
+        & > .text{
+            display: inline-block;
+            width: 150px;
+            line-height: 19px;
+            vertical-align: top;
+            & p{
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+
+        // Element 'panel--vacancy-map'
+        &-map{
+            background: url('/Content/img/panel/map-bg.png') 0 0 no-repeat;
+            cursor: pointer;
+
+            & .text{
+                float: right;
+                width: 100px;
+                text-align: right;
+                font-size: 24px;
+                color: #034da2;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+        }
+    }
+
     // Modificator 'panel--white'
     &--white{
         background: @panel-white-background;

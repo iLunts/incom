@@ -28,6 +28,19 @@
         }
     }
 
+    // modificator 'list--img'
+    &--img{
+
+        & li{
+            margin-bottom: 15px;
+        }
+
+        & .img{
+            float: left;
+            margin-right: 10px;
+        }
+    }
+
     // Element 'list__teaser'
     &__teaser{
         display: inline-block;
@@ -63,6 +76,24 @@
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
 
+    // Modificator 'list--dashed'
+    &--dashed{
+        margin: 15px 0 15px 10px;
+
+        & > li{
+            position: relative;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            padding-left: 20px;
+
+            &:before{
+                content: '—';
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
     // Modificator 'list--number'
     &--number{
         list-style: none;
@@ -94,5 +125,23 @@
                 behavior: url(PIE.htc);
             }
         }
+    }
+}
+
+
+// ********************************************************************
+//                             OL
+// ********************************************************************
+
+ol{
+    list-style: decimal outside;
+    padding: 0 0 0 20px;
+    margin: 0;
+
+    & > li {
+        margin: 0;
+        padding: 0;
+        line-height: 23px;
+        padding-top: 6px;
     }
 }
