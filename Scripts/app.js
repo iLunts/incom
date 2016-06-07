@@ -67,6 +67,9 @@ app.controller("reviewController", function ($scope) {
     ]
 });
 
+// News
+app.controller("pressController", function ($scope) { });
+
 
 // Jobs
 app.controller("vacancyController", function ($scope) { });
@@ -172,7 +175,7 @@ app.config(function($routeProvider){
             controller:'ipotekaController'
         });
 
-        // JOBS
+        // Jobs
         $routeProvider.when('/jobs/vacancy/',
         {
             templateUrl:'views/jobs/vacancy.html',
@@ -209,6 +212,14 @@ app.config(function($routeProvider){
             templateUrl:'views/company/review.html',
             controller:'reviewController'
         });
+
+        // News
+        $routeProvider.when('/news/press/',
+        {
+            templateUrl:'views/news/press.html',
+            controller:'pressController'
+        });
+
 
         $routeProvider.otherwise({redirectTo: '/'});
 });

@@ -40,6 +40,25 @@
         }
     }
 
+    // Modificator 'list--tags'
+    &--tags{
+        & > li{
+            display: inline-block;
+
+            & > a{
+                position: relative;
+                line-height: 20px;
+                font-size: 12px;
+                text-decoration: underline;
+                margin-right: 10px;
+
+                &:after{
+                    content: ',';
+                }
+            }
+        }
+    }
+
     // modificator 'list--img'
     &--img{
 
@@ -50,6 +69,16 @@
         & .img{
             float: left;
             margin-right: 10px;
+        }
+
+        &-large{
+            & .img{
+                margin-right: 2px;
+            }
+            & span{
+                font-size: 17px;
+                line-height: 45px;
+            }
         }
     }
 
