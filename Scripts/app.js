@@ -72,6 +72,7 @@ app.controller("pressController", function ($scope) { });
 //Nedvizhimost
 app.controller("arendaKottedzheyController", function ($scope) { });
 app.controller("nedvizhimostController", function ($scope) { });
+app.controller("prodazhaNezhilyhPomeshcheniyController", function ($scope) { });
 
 // Jobs
 app.controller("vacancyController", function ($scope) { });
@@ -223,6 +224,12 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/sale-realty/arenda-kottedzhey.html',
             controller:'arendaKottedzheyController'
+        });
+
+        $routeProvider.when('/prodaja-nezhilyh-pomeshcheniy/',
+        {
+            templateUrl:'views/sale-realty/prodaja-nezhilyh-pomeshcheniy.html',
+            controller:'prodazhaNezhilyhPomeshcheniyController'
         });
 
         // Realty
