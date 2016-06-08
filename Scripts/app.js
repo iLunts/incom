@@ -47,7 +47,6 @@ app.controller("homeController", function ($scope) {
 
 app.controller("flatController", function ($scope) { });
 app.controller("newbuildController", function ($scope) { });
-app.controller("nedvizhimostController", function ($scope) { });
 app.controller("searchController", function ($scope) { });
 app.controller("officesController", function ($scope) { });
 app.controller("searchResultController", function ($scope) { });
@@ -70,6 +69,9 @@ app.controller("reviewController", function ($scope) {
 // News
 app.controller("pressController", function ($scope) { });
 
+//Nedvizhimost
+app.controller("arendaKottedzheyController", function ($scope) { });
+app.controller("nedvizhimostController", function ($scope) { });
 
 // Jobs
 app.controller("vacancyController", function ($scope) { });
@@ -82,7 +84,10 @@ app.controller("successController", function ($scope) {
     ];
 });
 
+// Realty
+app.controller("realtyController", function ($scope) { });
 
+// Ipoteka
 app.controller("ipotekaController", function ($scope) {
     $scope.reviews = [
         {url: 'http://www.incom.ru/upload/iblock/94d/openbank.png', text: 'Компания «Инком-Недвижимость» крупнейший партнер Банка Уралсиб по ипотечному кредитованию. Профессионализм и высокая квалификация специалистов компании подтверждается как сотрудниками Банка, так и отзывами клиентов на протяжении всего длительного периода сотрудничества. Успех «Инком-Недвижимость» обусловлен открытостью и доступностью, четким пониманием потребностей клиентов и партнеров. Мы рекомендуем «Инком-Недвижимость» и предлагаем особые условия ипотечного кредитования для клиентов компании — снижение ставки на 1% от стандартных тарифов по программам ипотечного кредитования Банка.', name: 'Директор центра ипотечного кредитования Металлинвестбанка, Станислав Кондакчян'},
@@ -211,6 +216,20 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/company/review.html',
             controller:'reviewController'
+        });
+
+        // Nedvizhimost
+        $routeProvider.when('/arenda-kottedzhey/',
+        {
+            templateUrl:'views/sale-realty/arenda-kottedzhey.html',
+            controller:'arendaKottedzheyController'
+        });
+
+        // Realty
+        $routeProvider.when('/rent-realty/flats/',
+        {
+            templateUrl:'views/rent-realty/flats.html',
+            controller:'realtyController'
         });
 
         // News
