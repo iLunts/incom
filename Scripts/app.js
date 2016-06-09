@@ -90,6 +90,9 @@ app.controller("realtyController", function ($scope) { });
 
 // Uslugi
 app.controller("pokupkaKvartirController", function ($scope) { });
+app.controller("pokupkaKvartirNewController", function ($scope) { });
+app.controller("pokupkaNedvizimostiController", function ($scope) { });
+app.controller("loyalnostController", function ($scope) { });
 
 // Ipoteka
 app.controller("ipotekaController", function ($scope) {
@@ -247,6 +250,21 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/uslugi/pokupka-kvartir-i-komnat.html',
             controller:'pokupkaKvartirController'
+        });
+        $routeProvider.when('/uslugi/pokupka-kvartir-v-novostroykakh/',
+        {
+            templateUrl:'views/uslugi/pokupka-kvartir-v-novostroykakh.html',
+            controller:'pokupkaKvartirNewController'
+        });
+        $routeProvider.when('/uslugi/pokupka-zagorodnoy-nedvizhimosti/',
+        {
+            templateUrl:'views/uslugi/pokupka-zagorodnoy-nedvizhimosti.html',
+            controller:'pokupkaNedvizimostiController'
+        });
+        $routeProvider.when('/uslugi/programma-loyalnosti/',
+        {
+            templateUrl:'views/uslugi/programma-loyalnosti.html',
+            controller:'loyalnostController'
         });
 
         // News
