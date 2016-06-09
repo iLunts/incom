@@ -88,6 +88,9 @@ app.controller("successController", function ($scope) {
 // Realty
 app.controller("realtyController", function ($scope) { });
 
+// Uslugi
+app.controller("pokupkaKvartirController", function ($scope) { });
+
 // Ipoteka
 app.controller("ipotekaController", function ($scope) {
     $scope.reviews = [
@@ -237,6 +240,13 @@ app.config(function($routeProvider){
         {
             templateUrl:'views/rent-realty/flats.html',
             controller:'realtyController'
+        });
+
+        // Uslugi
+        $routeProvider.when('/uslugi/pokupka-kvartir-i-komnat/',
+        {
+            templateUrl:'views/uslugi/pokupka-kvartir-i-komnat.html',
+            controller:'pokupkaKvartirController'
         });
 
         // News
