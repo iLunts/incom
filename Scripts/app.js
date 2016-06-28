@@ -35,8 +35,7 @@ app.controller("homeController", function ($scope) {
         {url: '/Content/img/slider/slide-1.jpg', alt: 'текст'},
         {url: '/Content/img/slider/slide-2.jpg', alt: 'текст'},
         {url: '/Content/img/slider/slide-3.jpg', alt: 'текст'},
-        {url: '/Content/img/slider/slide-4.jpg', alt: 'текст'},
-        {url: '/Content/img/slider/slide-5.jpg', alt: 'текст'}
+        {url: '/Content/img/slider/slide-4.jpg', alt: 'текст'}
     ];
 });
 
