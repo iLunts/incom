@@ -43,7 +43,16 @@ app.controller("homeController", function ($scope) {
 app.controller("flatController", function ($scope) { });
 app.controller("newbuildController", function ($scope) { });
 app.controller("searchController", function ($scope) { });
-app.controller("officesController", function ($scope) { });
+app.controller("officesController", function ($scope) {
+    $scope.offices = [
+        {adress: 'ул. Купалы 21', place: '(Дворец Ветеранов)', metro: 'Октябрьская', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-680-66-70' },
+        {adress: 'ул. Кульман 9', place: '(ТЦ Монетка)', metro: 'Площадь Якуба Коласа', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-680-44-75' },
+        {adress: 'ул. Короля 9', place: '', metro: 'Немига', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-321-36-20' },
+        {adress: 'ул. Притыцкого 29', place: '(ТЦ Тивали)', metro: 'Спортивная', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-727-04-32' }
+    ];
+
+    $scope.isOpenMode = 'list';
+});
 app.controller("searchResultController", function ($scope) { });
 app.controller("searchDomaController", function ($scope) { });
 

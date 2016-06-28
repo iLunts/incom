@@ -34,8 +34,38 @@
     </div>
 
     <div>
-        <a href="#/" class="button button--medium button--border">Схема</a>
-        <a href="#/" class="button button--medium button--border">Карта</a>
-        <a href="#/" class="button button--medium button--border">Список</a>
+        <a href="" data-ng-click="isOpenMode = 'list'" class="button button--medium button--border" data-ng-class="{'active' : isOpenMode == 'list'}">Список</a>
+        <a href="" data-ng-click="isOpenMode = 'map'" class="button button--medium button--border" data-ng-class="{'active' : isOpenMode == 'map'}">Карта</a>
+    </div>
+
+    <div data-ng-if="isOpenMode = 'list'" class="margin--top">
+        <table class="table-search">
+            <thead>
+                <tr>
+                    <th><a href="#/">Адрес</a></th>
+                    <th><a href="#/">Метро</a></th>
+                    <th><a href="#/">Время работы</a></th>
+                    <th><a href="#/">Телефон</a></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr data-ng-repeat="item in offices">
+                    <td>
+                        <div class="margin--v">
+                            <p class="margin--left">
+                                <span>{{item.adress}}</span><br>
+                                <small class="text--small">{{item.place}}</small>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        {{item.metro}}
+                    </td>
+                    <td>c {{item.workStart}} до {{item.workEnd}}</td>
+                    <td><a data-ng-href="tel:{{item.phone}}">{{item.phone}}</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
