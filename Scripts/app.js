@@ -44,10 +44,20 @@ app.controller("newbuildController", function ($scope) { });
 app.controller("searchController", function ($scope) { });
 app.controller("officesController", function ($scope) {
     $scope.offices = [
-        {adress: 'ул. Купалы 21', place: '(Дворец Ветеранов)', metro: 'Октябрьская', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-680-66-70' },
-        {adress: 'ул. Кульман 9', place: '(ТЦ Монетка)', metro: 'Площадь Якуба Коласа', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-680-44-75' },
-        {adress: 'ул. Короля 9', place: '', metro: 'Немига', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-321-36-20' },
-        {adress: 'ул. Притыцкого 29', place: '(ТЦ Тивали)', metro: 'Спортивная', workStart: '09:00', workEnd: '19:00', phone: '+375-(29)-727-04-32' }
+        {photo: '/content/img/office/yanki.jpg', adress: 'ул. Купалы 21', place: '(Дворец Ветеранов)', metro: 'Октябрьская', workStart: '09:00', workEnd: '19:00', phones: [
+            {office: '(Офис 112)', phone: '+375-(29)-680-66-70', author: 'Андрей'},
+            {office: '(Офис 114)', phone: '+375-(29)-145-82-23', author: 'Маргарита'}
+        ] },
+        {photo: '/content/img/office/kylman9.jpg', adress: 'ул. Кульман 9', place: '(ТЦ Монетка)', metro: 'Площадь Якуба Коласа', workStart: '09:00', workEnd: '19:00', phones: [
+            {office: '-', phone: '+375-(29)-680-44-75', author: 'Роман'}
+        ] },
+        {photo: '/content/img/office/korola.jpg', adress: 'ул. Короля 9', place: '', metro: 'Немига', workStart: '09:00', workEnd: '19:00', phones: [
+            {office: '(Офис 11)', phone: '+375-(29)-321-36-20', author: 'Елена'},
+            {office: '(Офис 28)', phone: '+375-(29)-160-86-19', author: 'Янина'}
+        ] },
+        {photo: '/content/img/office/pritickogo29.jpg', adress: 'ул. Притыцкого 29', place: '(ТЦ Тивали)', metro: 'Спортивная', workStart: '09:00', workEnd: '19:00', phones: [
+            {office: '-', phone: '+375-(29)-727-04-32', author: 'Татьяна'}
+        ] }
     ];
 
     $scope.isOpenMode = 'list';

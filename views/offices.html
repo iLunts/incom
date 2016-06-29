@@ -46,6 +46,7 @@
                     <th><a href="#/">Метро</a></th>
                     <th><a href="#/">Время работы</a></th>
                     <th><a href="#/">Телефон</a></th>
+                    <th class="text--center">Офис</th>
                 </tr>
             </thead>
 
@@ -53,17 +54,29 @@
                 <tr data-ng-repeat="item in offices">
                     <td>
                         <div class="margin--v">
-                            <p class="margin--left">
-                                <span>{{item.adress}}</span><br>
-                                <small class="text--small">{{item.place}}</small>
-                            </p>
+                            <!-- <p class="margin--left"> -->
+                                <img src="{{item.photo}}" class="office__img border--radius" width="80" alt="Офис ЗемНедвижимости на {{item.adress}}">
+                                <div class="office__title">
+                                    <span>{{item.adress}}</span><br>
+                                    <small class="text--small">{{item.place}}</small>
+                                </div>
+                            <!-- </p> -->
                         </div>
                     </td>
                     <td>
                         {{item.metro}}
                     </td>
-                    <td>c {{item.workStart}} до {{item.workEnd}}</td>
-                    <td><a data-ng-href="tel:{{item.phone}}">{{item.phone}}</a></td>
+                    <td class="text--bold">c {{item.workStart}} до {{item.workEnd}}</td>
+                    <td>
+                        <p class="margin--reset" data-ng-repeat="itemSec in item.phones">
+                            <a data-ng-href="tel:{{itemSec.phone}}">{{itemSec.phone}}</a>&nbsp;<span class="margin--left">{{itemSec.author}}</span>
+                        </p>
+                    </td>
+                    <td class="text--center">
+                        <p data-ng-repeat="itemSec in item.phones">
+                            <small class="text--small">{{itemSec.office}}</small>
+                        </p>
+                    </td>
                 </tr>
             </tbody>
         </table>
