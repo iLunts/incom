@@ -59,7 +59,7 @@ app.controller("officesController", function ($scope) {
             {office: '-', phone: '+375-(29)-727-04-32', author: 'Татьяна'}
         ] },
         {photo: '/content/img/office/gagarina109.jpg', city: 'г. Борисов', adress: 'ул. Гагаринаул. 109', place: '', metro: '', workStart: '09:00', workEnd: '19:00', phones: [
-            {office: '-', phone: '‎+375-(29)-727-21-32', author: 'Вадим'}
+            {office: '-', phone: '‎+375-(29)-727-31-32', author: 'Вадим'}
         ] }
     ];
 
